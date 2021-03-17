@@ -4,6 +4,8 @@ const Schema = mongoose.Schema;
 
 
 const rekkidSchema = new mongoose.Schema({
+    text: String,
+
     user: {
       type: Schema.Types.ObjectId,
       ref: 'User'
@@ -18,8 +20,7 @@ const rekkidSchema = new mongoose.Schema({
     },
 
     yearReleased: {
-        type: Number,
-        default:null
+        type: Date
     },
 
     artist: {
@@ -27,7 +28,7 @@ const rekkidSchema = new mongoose.Schema({
     },
 
     yearPurchased: {
-        type: Number
+        type: Date
     }
 });
 

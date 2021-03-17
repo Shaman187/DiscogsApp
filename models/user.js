@@ -2,26 +2,28 @@ const mongoose = require('mongoose');
 
 // Create your User Model
 const rekkidSchema = new mongoose.Schema({
-    title: {
-      type: String
-    },
+  text: String,
 
-    label: {
-      type: String
-    },
+  title: {
+    type: String
+  },
 
-    yearReleased: {
-        type: Number,
-        default:null
-    },
+  label: {
+    type: String
+  },
 
-    artist: {
-        type: String 
-    },
+  yearReleased: {
+      type: Number,
+      default:null
+  },
 
-    yearPurchased: {
-        type: Number
-    }
+  artist: {
+      type: String 
+  },
+
+  yearPurchased: {
+      type: Number
+  }
 });
 
 const userSchema = new mongoose.Schema({
@@ -29,7 +31,7 @@ const userSchema = new mongoose.Schema({
     email: String,
     avatar: String,
     googleId: String,
-    records: [rekkidSchema]
+    rekkids: [rekkidSchema]
   });
   
   module.exports = mongoose.model('User', userSchema);

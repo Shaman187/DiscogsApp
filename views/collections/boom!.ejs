@@ -36,34 +36,15 @@
     </div>
   </nav>
 
-  <table id="list">
-    <thead>
-      <tr>
-        <th>Title</th>
 
-        <th>Artist</th>
-        
-        <th>Label</th>
-
-        <th>Year</th>
-
-        <th>When I Got It</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% rekkids.forEach(function(r) { %>
-        <tr>
-          <td><%= r.title %></td>
-          <td><%= r.artist %></td>
-          <td><%= r.label %></td>
-          <td><%= r.yearReleased %></td>
-          <td><%= r.yearPurchased %></td>
-          <td><a href="/collections/<%= r._id %>">Specs!</a></td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table>
-
-</body>
-</html>
+<a class="active" href="/collections">My Rekkids!</a>
+<h1>Rekkid Specs</h1>
+<div class = "rekkid"><strong>Title: </strong><%= rekkid.title %></div>
+<div class = "rekkid"><strong>Artist: </strong><%= rekkid.artist %></div>
+<div class = "rekkid"><strong>Label: </strong><%= rekkid.label %></div>
+<div class = "rekkid"><strong>Year: </strong><%= rekkid.yearReleased %></div>
+<div class = "rekkid"><strong>When I Got It: </strong><%= rekkid.yearPurchased %></div>
+<h4>Delete rekkid</h4>
+<form action = "/collections/<%= rekkid._id %>?_method=DELETE" class = "delete-form" method = "POST">
+<button type="submit">Boom!</button>
+</form>

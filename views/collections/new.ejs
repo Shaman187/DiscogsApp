@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rekkids</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
 <body>
@@ -36,34 +36,25 @@
     </div>
   </nav>
 
-  <table id="list">
-    <thead>
-      <tr>
-        <th>Title</th>
+<% if (user._id.equals(user && user._id)) { %>
+<div>
+<form class= "newRekkid" id="newRekkid-form" action="/collections/new" method="POST">
+  <label class = "rekkid">Title:</label>
+  <input type="text" name="title">
+  <label class = "rekkid">Artist:</label>
+  <input type="text" name="artist">
+  <label class = "rekkid">Label:</label>
+  <input type="text" name="label">
+  <label class = "rekkid">Year:</label>
+  <input type="date" name="yearReleased">
+  <label class = "rekkid">When I got It:</label>
+  <input type="date" name="yearPurchased">
+  <input type="submit" value="Add Rekkid">
+ 
+</form>
+</div>
+<% } %>
 
-        <th>Artist</th>
-        
-        <th>Label</th>
-
-        <th>Year</th>
-
-        <th>When I Got It</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% rekkids.forEach(function(r) { %>
-        <tr>
-          <td><%= r.title %></td>
-          <td><%= r.artist %></td>
-          <td><%= r.label %></td>
-          <td><%= r.yearReleased %></td>
-          <td><%= r.yearPurchased %></td>
-          <td><a href="/collections/<%= r._id %>">Specs!</a></td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table>
 
 </body>
 </html>
