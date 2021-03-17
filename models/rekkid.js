@@ -1,7 +1,14 @@
 const mongoose = require('mongoose');
+const user = require('./user')
+const Schema = mongoose.Schema;
 
-// Create your User Model
+
 const rekkidSchema = new mongoose.Schema({
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    },
+
     title: {
       type: String
     },
@@ -24,12 +31,4 @@ const rekkidSchema = new mongoose.Schema({
     }
 });
 
-const userSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    avatar: String,
-    googleId: String,
-    records: [rekkidSchema]
-  });
-  
-  module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Rekkid', rekkidSchema)

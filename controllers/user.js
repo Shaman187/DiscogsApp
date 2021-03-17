@@ -2,19 +2,7 @@ const User = require('../models/user');
 
 module.exports = {
   index,
-  addFact
 };
-
-function addFact(req, res){
-    console.log(req.user, ' req.user');
-  
-    // req.user is the mongoose document of our logged in user
-    req.user.facts.push(req.body);
-    // if mutate a document we have to save it
-    req.user.save(function(err) {
-      res.redirect('/users')
-    })
-  }
 
 function index(req, res, next) {
   console.log(req.query)
@@ -24,11 +12,11 @@ function index(req, res, next) {
   // Default to sorting by name
   let sortKey = req.query.sort || 'name';
   User.find(modelQuery)
-  .sort(sortKey).exec(function(err, users) {
+  .sort(sortKey).exec(function(err, user) {
     if (err) return next(err);
     // Passing search values, name & sortKey, for use in the EJS
-    res.render('users/index', {
-      users,
+    res.render('user/index', {
+      user,
       user: req.user,
       name: req.query.name,
       sortKey

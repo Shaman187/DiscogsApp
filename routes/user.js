@@ -1,10 +1,12 @@
 let router = require('express').Router();
-let usersCtrl = require('../controllers/users');
 const user = require('../models/user');
+let usersCtrl = require('../controllers/user');
+let collectionCtrl = require('../controllers/collection');
 
-// GET /students
-router.get('/users', usersCtrl.index);
-router.post('/facts', isLoggedIn, usersCtrl.addFact);
+// GET /user
+router.get('/user', usersCtrl.index);
+// router.post('/posts', isLoggedIn, usersCtrl.addPost);
+router.get('/collections',collectionCtrl.index);
 
 // custom authorization middleware function
 function isLoggedIn(req, res, next){
