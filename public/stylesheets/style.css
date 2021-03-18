@@ -28,9 +28,9 @@ body {
 }
 
 .collection {
-  color: black
+  color: black;
 }
 
 label {
-  color: yellow;
+  color: red;
 }
