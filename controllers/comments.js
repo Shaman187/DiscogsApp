@@ -29,7 +29,7 @@ function deleteComment(req, res) {
 
 function update(req, res) {
     // Note the cool "dot" syntax to query on the property of a subdoc
-    Rekkid.findOne({'comments._id': req.params.id}, function(err, srekkid) {
+    Rekkid.findOne({'comments._id': req.params.id}, function(err, rekkid) {
       // Find the comment subdoc using the id method on Mongoose arrays
       
       const commentSubdoc = rekkid.comments.id(req.params.id);

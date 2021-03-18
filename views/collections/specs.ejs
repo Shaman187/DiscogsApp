@@ -37,16 +37,58 @@
   </nav>
 
 
-
-<h1 class="text-info">Rekkid Specs</h1>
-<div class = "text-danger"><strong>Title: </strong><%= rekkid.title %></div>
-<div class = "text-danger"><strong>Artist: </strong><%= rekkid.artist %></div>
-<div class = "text-danger"><strong>Label: </strong><%= rekkid.label %></div>
-<div class = "text-danger"><strong>Year: </strong><%= rekkid.yearReleased %></div>
-<div class = "text-danger"><strong>When I Got It: </strong><%= rekkid.yearPurchased %></div>
+<div>
+  <h1 class="text-info">Rekkid Specs</h1>
+  <div class = "text-danger"><strong>Title: </strong><%= rekkid.title %></div>
+  <div class = "text-danger"><strong>Artist: </strong><%= rekkid.artist %></div>
+  <div class = "text-danger"><strong>Label: </strong><%= rekkid.label %></div>
+  <div class = "text-danger"><strong>Year: </strong><%= rekkid.yearReleased %></div>
+  <div class = "text-danger"><strong>When I Got It: </strong><%= rekkid.yearPurchased %></div>
 <h4>Delete rekkid</h4>
 <form action = "/collections/<%= rekkid._id %>?_method=DELETE" class = "delete-form" method = "POST">
 <button class="btn btn-danger" type="submit">Boom!</button>
+</form>
+
+<br><br>
+<form id="add-comment-form" method="POST"
+action="/collections/<%= rekkid._id %>/comments">
+<textarea name="content"></textarea>
+<input type="submit" value="Add Comment">
+</form>
+
+<% if (rekkid.comments.length) { %>
+    <table>
+    <thead>
+        <tr>
+        <th>COMMENTS:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% rekkid.comments.forEach(function(comment) { %>
+        <tr>
+            <td><%= comment.content %></td>
+            <td>
+                <% if (rekkid.user.equals(user._id)) { %>
+                <form action="/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                <button id="delete" type="submit">X</button>
+                </form>
+                <form action="/comments/<%= comment._id %>?_method=PUT" method="POST">
+                    <input name="text" value="<%= comment.text %>">
+                    <button id="update" type="submit">Change It Up!</button>
+                </form>
+            <% } %>
+            </td>
+        </tr>
+        <% }); %>
+        
+    </tbody>
+    </table>
+<% } else { %>
+    <h6>No Thoughts Yet...</h6>
+<% } %>
 
 
+
+
+</div>
 </body>
