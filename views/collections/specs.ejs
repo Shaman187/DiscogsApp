@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rekkids</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
 <body>
@@ -37,14 +37,14 @@
   </nav>
 
 
-<a class="active" href="/collections">My Rekkids!</a>
+
 <h1>Rekkid Specs</h1>
-<div class = "rekkid"><strong>Title: </strong><%= rekkid.title %></div>
-<div class = "rekkid"><strong>Artist: </strong><%= rekkid.artist %></div>
-<div class = "rekkid"><strong>Label: </strong><%= rekkid.label %></div>
-<div class = "rekkid"><strong>Year: </strong><%= rekkid.yearReleased %></div>
-<div class = "rekkid"><strong>When I Got It: </strong><%= rekkid.yearPurchased %></div>
+<div class = "text-danger"><strong>Title: </strong><%= rekkid.title %></div>
+<div class = "text-danger"><strong>Artist: </strong><%= rekkid.artist %></div>
+<div class = "text-danger"><strong>Label: </strong><%= rekkid.label %></div>
+<div class = "text-danger"><strong>Year: </strong><%= rekkid.yearReleased %></div>
+<div class = "text-danger"><strong>When I Got It: </strong><%= rekkid.yearPurchased %></div>
 <h4>Delete rekkid</h4>
 <form action = "/collections/<%= rekkid._id %>?_method=DELETE" class = "delete-form" method = "POST">
-<button type="submit">Boom!</button>
+<button class="btn btn-danger" type="submit">Boom!</button>
 </form>

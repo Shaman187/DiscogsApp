@@ -11,7 +11,7 @@ module.exports = {
 
 function rekkidSpecs(req, res){
    Rekkid.findById(req.params.id, function(err, rekkid){
-       res.render('collections/boom!', {rekkid: rekkid})
+       res.render('collections/specs', {rekkid: rekkid})
    });
 };  
 

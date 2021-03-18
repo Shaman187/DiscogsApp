@@ -20,7 +20,7 @@ const rekkidSchema = new mongoose.Schema({
     },
 
     yearReleased: {
-        type: Date
+        type: Number
     },
 
     artist: {
@@ -28,7 +28,7 @@ const rekkidSchema = new mongoose.Schema({
     },
 
     yearPurchased: {
-        type: Date
+        type: Number
     }
 });
 

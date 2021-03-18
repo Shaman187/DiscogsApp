@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rekkids</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
 <body>
@@ -36,22 +36,22 @@
     </div>
   </nav>
 
-  <table id="list">
+  <table class="table-striped" id="list">
     <thead>
-      <tr>
-        <th>Title</th>
+      <tr class="table-striped">
+        <th class="text-danger">Title</th>
 
-        <th>Artist</th>
+        <th class="text-danger">Artist</th>
         
-        <th>Label</th>
+        <th class="text-danger">Label</th>
 
-        <th>Year</th>
+        <th class="text-danger">Year</th>
 
-        <th>When I Got It</th>
-        <th></th>
+        <th class="text-danger">When I Got It</th>
+        
       </tr>
     </thead>
-    <tbody>
+    <tbody class="bg-danger">
       <% rekkids.forEach(function(r) { %>
         <tr>
           <td><%= r.title %></td>
