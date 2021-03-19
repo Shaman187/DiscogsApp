@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rekkids</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
@@ -51,7 +51,7 @@
         
       </tr>
     </thead>
-    <tbody class="bg-danger">
+    <tbody>
       <% rekkids.forEach(function(r) { %>
         <tr>
           <td><%= r.title %></td>
@@ -59,11 +59,12 @@
           <td><%= r.label %></td>
           <td><%= r.yearReleased %></td>
           <td><%= r.yearPurchased %></td>
-          <td><a class="btn-warning" href="/collections/<%= r._id %>">Specs!</a></td>
+          <td><a class="btn-xs btn-warning" href="/collections/<%= r._id %>">Specs!</a></td>
         </tr>
         <% }); %>
       </tbody>
     </table>
 
 </body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </html>

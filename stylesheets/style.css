@@ -38,3 +38,8 @@ label {
 .headline {
   color: springgreen;
 }
+
+.frontPage {
+  width: 150px;
+  height: 70px;
+}

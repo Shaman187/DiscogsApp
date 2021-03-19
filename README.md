@@ -1,34 +1,37 @@
-# passport-boilerplate
+# Rekkids
 
 
-This is your passport boilerplate.
+This is Rekkids, a vinyl record cataloguing application. 
 
-## Setup 
+I decided to make this app as I am an avid collector of
+records and have no real solid way of cataloguing them my own way.
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+Objective is to have a list of what records you have, when you acquired them, 
+and what about them makes them so special.
+
+## Screenshots
 
 
-#### Setup your git repo
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin master` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin master`
 
-#### Setup your login
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file
-3. Setup the Code in your config passport 
-4. Setup your call back routes in your `routes/index`
-5. Setup a view and test your login!
+#### Technologies Used
 
-#### Make a commit 
+HTML5 | Javascript | Mongoose | MongoDB | Oauth
+CSS | Node.js
 
-```git commit -m "setup up oauth and User Model"```
+#### Features
+
+- Can login via Google
+- Each collection belongs to each user
+- Can add and remove releases
+
+#### App and Trello
+
+https://rekkids.herokuapp.com
+https://trello.com/b/xHBCPHde/rekkids
+
+#### Next Steps 
+
+- Implement Discogs API
+- Add profile customization
+- Collection rating system

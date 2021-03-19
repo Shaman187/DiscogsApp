@@ -34,3 +34,8 @@ body {
 label {
   color: red;
 }
+
+.frontPage {
+  width: 150px;
+  height: 70px;
+}
