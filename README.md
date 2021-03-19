@@ -27,7 +27,8 @@ CSS | Node.js
 
 ### App and Trello
 
-https://rekkids.herokuapp.com\
+https://rekkids.herokuapp.com
+
 https://trello.com/b/xHBCPHde/rekkids
 
 ### Next Steps 
