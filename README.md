@@ -35,6 +35,7 @@ https://trello.com/b/xHBCPHde/rekkids
 
 ### Next Steps 
 
+- Additional styling
 - Implement Discogs API
 - Add profile customization
 - Collection rating system
