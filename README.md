@@ -14,23 +14,23 @@ and what about them makes them so special.
 
 
 
-#### Technologies Used
+### Technologies Used
 
 HTML5 | Javascript | Mongoose | MongoDB | Oauth
 CSS | Node.js
 
-#### Features
+### Features
 
 - Can login via Google
 - Each collection belongs to each user
 - Can add and remove releases
 
-#### App and Trello
+### App and Trello
 
-https://rekkids.herokuapp.com
+https://rekkids.herokuapp.com\
 https://trello.com/b/xHBCPHde/rekkids
 
-#### Next Steps 
+### Next Steps 
 
 - Implement Discogs API
 - Add profile customization
