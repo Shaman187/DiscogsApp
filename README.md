@@ -18,7 +18,7 @@ and what about them makes them so special.
 
 ### Technologies Used
 
-HTML5 | Javascript | Mongoose | MongoDB | Oauth
+HTML5 | Javascript | Mongoose | MongoDB | Oauth |
 CSS | Node.js
 
 ### Features
